@@ -17,7 +17,7 @@ function submitLogin() {
     .catch(error => console.error('Error:', error));
 }
 
-    function myFunction() {
+    function sHowpass() {
     var x = document.getElementById("password");
     if (x.type === "password") {
       x.type = "text";
