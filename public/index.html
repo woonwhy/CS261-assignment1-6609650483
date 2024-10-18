@@ -7,24 +7,28 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-   
     <div class="login-container">
         <form id="loginForm">
-            <h1 >Login</h1>
+            <h1>Login</h1>
             <label for="username">Username:</label>
-            <input type="text" id="username" name="username" placeholder="Username" required>
+            <input type="text" id="username" name="username" placeholder="Enter username" required><br>
             <label for="password">Password:</label>
-            <input type="password" id="password" name="password" placeholder="Password" required>
+            <input type="password" id="password" name="password" placeholder="Enter password" required><br>
             
-            <button type="button" onclick="sHowpass()">Show Password</button><br><br>
-            <select class="select-role">
-                <option value="none">Select roles</option>
-                <option value="student"> Student</option>
-                <option value="lecturer" >Lecturer</option>
-
+            <button class="button" type="button" onclick="sHowpass()">Show Password</button><br><br>
+            <select class="select-role" required>
+                <option value="" disabled selected>Select roles...</option>
+                <option value="student">Student</option>
+                <option value="lecturer">Lecturer</option>
             </select><br><br>
-            <button type="button" onclick="submitLogin()">Login</button>
+            <button class="button" type="button" onclick="submitLogin()">Login</button>
         </form>
+        <div id="popup" class="popup">
+            <div class="popup-content">
+                <span class="close-btn">&times;</span>
+                <p id="popup-message"></p>
+            </div>
+        </div>
         <p id="message"></p>
     </div>
     <script src="js/script.js"></script>
